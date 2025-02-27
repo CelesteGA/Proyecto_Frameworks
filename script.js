@@ -266,7 +266,7 @@ addEventTitle.addEventListener("input", (e) => {
 function defineProperty() {
   var osccred = document.createElement("div");
   osccred.innerHTML =
-    "A Project By <a href='' target=_blank>Open Source Coding</a>";
+    "A Project By <a href='https://github.com/CelesteGA/Proyecto_Frameworks.git' target=_blank>Open Source Coding</a>";
   osccred.style.position = "absolute";
   osccred.style.bottom = "0";
   osccred.style.right = "0";
@@ -382,7 +382,6 @@ addEventSubmit.addEventListener("click", () => {
   addEventFrom.value = "";
   addEventTo.value = "";
   updateEvents(activeDay);
-  //select active day and add event class if not added
   const activeDayEl = document.querySelector(".day.active");
   if (!activeDayEl.classList.contains("event")) {
     activeDayEl.classList.add("event");
