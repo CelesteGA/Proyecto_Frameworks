@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Calendario de Eventos</title>
-  </head>
- 
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<link rel="stylesheet" href="style.css" />
-<title>Calendario de Eventos</title>
+<?php
+    include('../Admin/menu.php');
+    include('../Admin/db_connect.php');
+    ?>
+    
+    <!--  if(!isset($_SESSION['login_id']))
+    header('location:login.php'); -->
+    
+<!-- Boxicons -->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- css -->
+<link rel="stylesheet" href="../Admin/css/mStyle.css">
+<link rel="stylesheet" href="../Admin/css/Calendar.css">
+
+<title>ChronoTec</title>
 </head>
 
-<body>
-<div class="container">
+<main>
+    <!--Encabezado-->
+			<div class="head-title">
+				<div class="left">
+					<h1>Adm Eventos</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Adm Eventos</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Inicio</a>
+						</li>
+					</ul>
+				</div>
+    <!--Celendario de eventos-->
+    <ul class="box-info">
+    <div class="container">
   <div class="left">
     <div class="calendar">
       <div class="month">
         <i class="fas fa-angle-left prev"></i>
-        <div class="date">diciembre 2015</div>
+        <div class="date">febrero 2025</div>
         <i class="fas fa-angle-right next"></i>
       </div>
       <div class="weekdays">
@@ -58,7 +68,7 @@
   <div class="right">
     <div class="today-date">
       <div class="event-day">Mié</div>
-      <div class="event-date">12 de diciembre 2022</div>
+      <div class="event-date">19 de febrero 2025</div>
     </div>
     <div class="events"></div>
     <div class="add-event-wrapper">
@@ -94,14 +104,10 @@
     <i class="fas fa-plus"></i>
   </button>
 </div>
+</ul>
+</main>
 
-<div class="credits">
-  <p>
-    Copyright ❤️ 
-    <a href="" target="_blank">2025</a>
-  </p>
-</div>
-
-<script src="script.js"></script>
+<script src="../Admin/script/script_m.js"></script>
+<script src="../Admin/script/script_ae.js"></script>
 </body>
 </html>
